@@ -1,6 +1,7 @@
 # express_rest_api_server_test
 
-정밀측정장비를 원격으로 다루기 위한 node.js express 기반 REST API 서버 
+정밀측정장비를 원격으로 다루기 위한 node.js express 기반 REST API 서버입니다.
+GET, POST, PUT, DELETE 명령어를 서버로 보내면, 서버에서 측정장비로 부터 측정된 데이터를 가져와 json 형식의 파일로 클라이언트에게 보내줍니다.
 
 ## 시작하기  (windows 환경)
 
@@ -47,6 +48,13 @@
   GET /meas/volt/DC
   ```
 
+  return 예시
+  ```
+  {"volt":300}
+  ```
+
+  
+
 * current
 
   전류값을 가져오기
@@ -54,6 +62,11 @@
   ``` 
   GET /meas/curr/AC
   GET /meas/curr/DC
+  ```
+
+   return 예시 
+  ```
+   {"curr":20}
   ```
 
 * frequency
