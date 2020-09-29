@@ -1,6 +1,6 @@
 # express_rest_api_server_test
 
-정밀측정장비를 원격으로 다루기 위한 node.js express 서버 기반 REST API
+정밀측정장비를 원격으로 다루기 위한 node.js express 기반 REST API 서버 
 
 ## GET
 * voltage
@@ -29,7 +29,7 @@
 
 * configuration
     설정값 지정하기
-    
+
 
 ## PUT
 
