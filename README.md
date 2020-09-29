@@ -31,9 +31,9 @@ GET, POST, PUT, DELETE 명령어를 서버로 보내면, 서버에서 측정장�
    아래 URL에 접속하여 테스트 
 
    ```
-   http://localhost:443
-   http://localhost:443/meas/volt/AC
-   http://localhost:443/meas/curr/AC
+   http://localhost:2020
+   http://localhost:2020/meas/volt/AC
+   http://localhost:2020/meas/curr/AC
    ```
 
 
