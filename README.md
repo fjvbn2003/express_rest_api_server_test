@@ -3,6 +3,10 @@
 정밀측정장비를 원격으로 다루기 위한 node.js express 기반 REST API 서버입니다.
 GET, POST, PUT, DELETE 명령어를 서버로 보내면, 서버에서 측정장비로 부터 측정된 데이터를 가져와 json 형식의 파일로 클라이언트에게 보내줍니다.
 
+# 개발 BlockDiagram
+<img src="https://user-images.githubusercontent.com/5003195/94947247-4a5e9a80-0518-11eb-8193-8b552c5c7a68.jpg" width = "85%" class = "center"></img>
+
+
 ## 시작하기  (windows 환경)
 
 1. node.js LTS 버전 설치하기. https://nodejs.org/ko/
