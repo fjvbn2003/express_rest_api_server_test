@@ -1,8 +1,6 @@
 var express = require('express');
-var GPIB = require('linux-gpib');
 
-const gpib = GPIB(0)
-let dmm = gpib.connect({ pad :13 })
+
 
 const router = express.Router(); // 새로 생겼어요!
 
