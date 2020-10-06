@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/fjvbn2003/express_rest_api_server_test#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "linux-gpib": "^1.1.1"
   }
 }
