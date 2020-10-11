@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-let meas_router = require("./routers/measure");
+let meas_router = require("./routers/measure_test");
 const port = 2020;
 
 app.get("/", (req, res) => {

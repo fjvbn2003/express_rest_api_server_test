@@ -1,1 +1,42 @@
 test
+0. 빌드에 필요한 파일 다운로드.
+sudo apt update
+sudo apt install fxload
+sudo apt install build-essential
+sudo apt install wget
+sudo apt install linux-headers-$(컴퓨터 이름 -r)
+1. linux-gpib-4.3.3.tar.gz 파일 다운로드
+wget https://sourceforge.net/projects/linux-gpib/files/latest/download
+2. 다운로드 한 파일 압축풀기.
+tar -zxvf download
+3. kernel버전 user버전 압축풀기.
+ tar -zxvf linux-gpib-kernel-4.3.3.tar.gz
+ tar -zxvf linux-gpib-user-4.3.3.tar.gz
+4. 유저버전 빌드하기.
+cd linux-gpib-user-4.3.3
+./configure --sysconfdir=/etc
+make
+make install
+make device_files_install
+chmod /dev/gpib0 777
+5. 커널버전 빌드하기.
+cd linux-gpib-kernel-4.3.3
+make
+sudo make install
+현재 적재가능한 모듈 찾기
+modprobe -d /lib/modules
+alias char-major-160 gpib_common
+alias gpib0 ni_usb_b
+install ni_usb_b PATH=/sbin:/usr/sbin:/usr/local/sbin:$PATH;modporbe --ignore-install ni_usb_b;gpib_config --minor 0
+sudo gpib_config --minor 0
+sudo modprobe ni_usb_b
+6. 모듈 업데이트
+update-modules
+7. linux_gpib_firmware 설치
+cd ~
+git clone https://github.com/fmhess/linux_gpib_firmware/tree/master/ni_gpib_usb_b
+cd ni_gpib_usb_b
+sudo fxload -D /dev/bus/usb/001/002 -I niusbb_firmware.hex -s niusbb_loader.he
+8. 프로젝트 폴더로 이동후 실행
+npm install linux-gpib
+node ./app.js
